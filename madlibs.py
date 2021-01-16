@@ -19,7 +19,9 @@ AWESOMENESS = [
 def start_here():
     """Display homepage."""
 
-    return "Hi! This is the home page."
+    return """Hi! This is the home page.
+    <html><body>
+    <a href="/hello">Link to Hello Page!</a></body></html>"""
 
 
 @app.route('/hello')
