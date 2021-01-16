@@ -45,7 +45,7 @@ def greet_person():
 def show_madlib_form():
     """Show form to play madlib game."""
 
-    playerresponse = request.args.get(playgame)
+    playerresponse = request.args.get("playgame")
 
     if playerresponse == "yes":
         return render_template("game.html")
@@ -56,16 +56,16 @@ def show_madlib_form():
 def show_madlib():
     """Show madlib game based on response."""
 
-    person = request.args.get(gameperson)
-    color = request.args.get(gamecolor)
-    noun = request.args.get(gamenoun)
-    adjective = request.args.get(gameadjective)
+    person = request.args.get("gameperson")
+    color = request.args.get("gamecolor")
+    noun = request.args.get("gamenoun")
+    adjective = request.args.get("gameadjective")
 
-        return render_template("madlib.html"
-                               gameperson=person,
-                               gamecolor=colo
-                               gamenoun=noun,
-                               gameadjective=adjective)
+    return render_template("madlib.html",
+                            gameperson=person,
+                            gamecolor=color,
+                            gamenoun=noun,
+                            gameadjective=adjective)
 
 
 if __name__ == '__main__':
