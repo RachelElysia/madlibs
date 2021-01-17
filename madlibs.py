@@ -58,13 +58,16 @@ def show_madlib_form():
 def show_madlib():
     """Show madlib game based on response."""
 
-    person = request.args.get("gameperson")
+    #wrote two ways to pass values, one with attributes, one without 
+    
+    #gets gameperson value from game.html and assigns to attribute person
     color = request.args.get("gamecolor")
     noun = request.args.get("gamenoun")
     adjective = request.args.get("gameadjective")
 
+    #uses attribute person as gameperson value on madlib.html
     return render_template("madlib.html",
-                            gameperson=person,
+                            gameperson=request.args.get("gameperson"),
                             gamecolor=color,
                             gamenoun=noun,
                             gameadjective=adjective)
