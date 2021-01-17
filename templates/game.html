@@ -2,31 +2,81 @@
 <html>
 <head>
   <title>Madlib Game</title>
+  <style>
+    p,
+    div,
+    .dropdown,
+    #submit {
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      color: darkslategrey;
+    }
+    body {
+      background-color: lightslategrey;
+    }
+    #main {
+      background-color: lightsteelblue;
+      width: 60%;
+      height: 400px;
+      margin: auto;
+      border: 3px solid darkslategrey;
+      padding: 10px;
+    }
+
+  </style>
 </head>
 <body>
-
+  <div id="main">
   <form action="/madlib"><p>
-    Sweet, Let's make a Madlib!</p> 
+    I'm glad you wanted to play a game. Let's make a Madlib!</p> 
     <div>
-    <label>Give me a person's name:</label>
-    <input type="text" name="gameperson">
+      <label>Give me a person's name:</label>
+      <div>
+        <select name="gameprefix">
+          <option class="dropdown" value="The Honorable">The Honorable</option>
+          <option class="dropdown" value="Lord">Lord</option>
+          <option class="dropdown" value="Lady">Lady</option>
+          <option class="dropdown" value="Chief">Chief</option>
+        </select>
+      </div>
+      <input type="text" name="gameperson">
     </div>
     <div>
-    <label>Write down any color:</label>
-    <input type="text" name="gamecolor">
+      <label>Write down any color:</label>
+      <input type="text" name="gamecolor">
     </div>
     <div>
-    <label>Choose any noun:</label>
-    <input type="text" name="gamenoun">
+      <label>Choose any noun:</label>
+      <input type="text" name="gamenoun">
     </div>
     <div>
         <label>Finally, tell me an adjective:</label>  
         <input type="text" name="gameadjective">
     </div>
     <div>
-    <input type="submit"> 
+      Choose a Weapon:
+      <input type="radio" name="gameweapon" value="sword">
+      <label>Sword</label>
+      <input type="radio" name="gameweapon" value="sling shot">
+      <label>Sling Shot</label>
+      <input type="radio" name="gameweapon" value="stick">
+      <label>Stick</label>
+    </div>
+    <div>
+      Preferred desserts:
+      <input type="checkbox" name="gamedessert" value="mocha cheesecake">
+      <label>Mocha Cheesecake</label>
+      <input type="checkbox" name="gamedessert" value="lemon pound cake">
+      <label>Lemon Pound Cake</label>
+      <input type="checkbox" name="gamedessert" value="triple berry pie">
+      <label>Triple Berry Pie</label>
+      <input type="checkbox" name="gamedessert" value="bland oats">
+      <label>None of these</label>         
+    </div>
+    <div>
+    <input id="submit" type="submit"> 
     </div>
   </form>
+  </div>
 
 </body>
 </html>
