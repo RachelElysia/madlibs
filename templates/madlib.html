@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What a Madlib!!!! Great job!</title>
+    <style>
+        p,
+        div {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: darkslategrey;
+        }
+        body {
+        background-color: {{ gamecolor }};
+        }
+        #main {
+        background-color: lightsteelblue;
+        width: 60%;
+        height: 400px;
+        margin: auto;
+        border: 3px solid darkslategrey;
+        padding: 10px;
+        }
+    </style>
 </head>
 <body>
+    <div id="main">
     <p>Once, not so long ago, there was a righteous human named {{ gameprefix }}
     {{ gameperson }}.
     One day, following down a mysterious {{ gamecolor }} path, {{ gameperson }}
@@ -25,5 +44,6 @@
     <p>{{ gameprefix }} {{ gameperson }} knew they had to continue their journey before
         they turned {{ gamecolor }} permanently like the {{ gameadjective }} {{ gamenoun }}!
     </p>
+    </div>
 </body>
 </html>
